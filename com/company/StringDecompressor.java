@@ -5,16 +5,14 @@ import java.util.Collections;
 
 public class StringDecompressor {
     private String inputString;
-    private char[] inputStringCharArray;
+    private char[] inputStringCharArray = new char[]{};
     private int stringNumberInOriginalTable; 
-    private String decompressedString;
+    private String decompressedString = new String();
     ArrayList<ComparableStringBuilder> permutationTable = new ArrayList<>();
 
     public StringDecompressor(String inputString, int stringNumberInOriginalTable) {
         this.inputString = inputString;
-        this.inputStringCharArray = new char[]{};
         this.stringNumberInOriginalTable = stringNumberInOriginalTable;
-        this.decompressedString = new String();
         initialization();
     }
 
