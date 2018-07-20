@@ -3,14 +3,14 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class StringDecompression {
+public class StringDecompressor {
     private String inputString;
     private char[] inputStringCharArray;
     private int stringNumberInOriginalTable; 
     private String decompressedString;
     ArrayList<ComparableStringBuilder> permutationTable = new ArrayList<>();
 
-    public StringDecompression(String inputString, int stringNumberInOriginalTable) {
+    public StringDecompressor(String inputString, int stringNumberInOriginalTable) {
         this.inputString = inputString;
         this.inputStringCharArray = new char[]{};
         this.stringNumberInOriginalTable = stringNumberInOriginalTable;

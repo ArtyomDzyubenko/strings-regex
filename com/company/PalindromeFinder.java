@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Palindrome {
+public class PalindromeFinder {
     private final static String ONLY_EN_RU_WORDS_REGEX = "[a-zа-яё]+";
 
     private String inputString;
     private String palindrome;
     private ArrayList<String> words;
     private String wordsExtractPattern = ONLY_EN_RU_WORDS_REGEX;
-        
-    Palindrome(String inputString){
+
+    PalindromeFinder(String inputString){
         this.inputString = inputString;
         this.palindrome = new String();
         this.words = new ArrayList<>();
@@ -31,7 +31,7 @@ public class Palindrome {
         while(matcher.find()){
             words.add(matcher.group());
         }
-        
+
         return true;
     }
 
@@ -100,7 +100,7 @@ public class Palindrome {
             }
 
             endWordPointerOffset++;
-         } while(startWordPointer != endOfText + 1);
+        } while(startWordPointer != endOfText + 1);
 
         return found;
     }

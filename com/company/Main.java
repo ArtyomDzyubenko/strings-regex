@@ -6,6 +6,7 @@ public class Main {
 
         //TASK 24
         System.out.println("#TASK 24#");
+
         String testText = "Lorem ipsum dolor sit 1amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt " +                       // 1
                 "           ut labore10 et dolore magna aliqua. 15.1Ut enim ad minim veniam, quis nostrud А роза упала на лапу Азора" +         // 10, 15.1 + palindrome(26)
                 "           exercitation ullamco " +
@@ -15,11 +16,11 @@ public class Main {
                 "           sunt in culpa qui offici4a deserunt mollit anim id est laborum. 5 1,3";                                             // 4, 5*/
 
 
-        IntegersFromString ifs = new IntegersFromString(testText);
-        ifs.extractIntegers();
+        IntegersFinder ifs = new IntegersFinder(testText);
+        ifs.extractElements();
         ifs.calculateSum();
 
-        for (Integer integer : ifs.getIntegers()) {
+        for (Integer integer : ifs.getElements()) {
             System.out.println(integer);
         }
 
@@ -31,7 +32,7 @@ public class Main {
 
         //TASK 14
         System.out.println("#TASK 14#");
-        Palindrome palindrome = new Palindrome(testText);
+        PalindromeFinder palindrome = new PalindromeFinder(testText);
         palindrome.extractPalindrome();
         System.out.println(palindrome.getPalindrome());
 
@@ -43,7 +44,7 @@ public class Main {
         System.out.println("#TASK 13#");
         String test = "VJAA";
 
-        StringDecompression sd = new StringDecompression(test, 3);
+        StringDecompressor sd = new StringDecompressor(test, 3);
         sd.decompress();
 
         System.out.println(sd.getDecompressedString());
