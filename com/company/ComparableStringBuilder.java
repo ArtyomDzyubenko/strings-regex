@@ -1,11 +1,16 @@
 package com.company;
 
 public class ComparableStringBuilder implements Comparable {
-    private StringBuilder sb;
+    private StringBuilder sb = new StringBuilder();
 
     public ComparableStringBuilder(){
-        sb = new StringBuilder();
+
     }
+
+    public ComparableStringBuilder(StringBuilder sb){
+        this.sb = sb;
+    }
+
 
     public ComparableStringBuilder append(char c) {
         sb.append(c);
